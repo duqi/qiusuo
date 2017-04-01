@@ -1,0 +1,47 @@
+body
+{
+    background-color: #F2ECDE;
+}
+
+#head-null-line {
+  border-width: 30px;
+  border-style: solid;
+  border-color: #F2ECDE;
+}
+
+#main {
+  border-width: 150px;
+  border-style: solid;
+  border-color: #F2ECDE;
+}
+
+#period {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 60px;
+  text-align: justify;
+  color: #FF4C00;
+}
+
+#sub-title {
+  font-family: "宋体", Times, serif;
+  font-size:40px;
+  color: #000000;
+  text-align: center;
+  -webkit-writing-mode: vertical-rl;
+}
+
+#web-nav-title{
+  font-family: "宋体", Times, serif;
+  font-size:40px;
+  color: #000000;
+  text-align:justify;
+  -webkit-writing-mode: vertical-rl;
+}
+
+#footer {
+  border-width: 30px;
+  border-style: solid;
+  border-color: #F2ECDE;
+  font-family: serif, "Times New Roman", Times;
+  text-align: center;
+}
