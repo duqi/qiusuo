@@ -22,6 +22,26 @@ body
   color: #FF4C00;
 }
 
+.sign {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 60px;
+  text-align: right;
+  color: #FF4C00;
+}
+
+ul.list {
+  list-style-type:circle;
+  text-align: center;
+  font-family: "宋体", Times, serif;
+  font-size:30px;
+  color: #000000;
+  -webkit-writing-mode: vertical-rl;
+  display: -webkit-flex; /* Safari */
+  -webkit-flex-flow: column-reverse wrap; /* Safari 6.1+ */
+  display: flex;
+  flex-flow: column-reverse wrap;
+}
+
 #sub-title {
   font-family: "宋体", Times, serif;
   font-size:40px;

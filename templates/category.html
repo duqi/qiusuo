@@ -1,6 +1,58 @@
-# -*- coding: utf-8 -*-
+{% extends "index.html" %}
 
-{% extends "bootstrap/base.html" %}
+<!DOCTYPE html>
+<html>
 
-{% block title %}详细网站导航{% endblock %}
-<h1>详细网站导航</h1>
+{% block head%}
+<!-- 继承index.html模板head内容 -->
+{{ super() }}
+<!-- 传递进类目的title -->
+<title>{{title}}</title>
+{% endblock%}
+
+{% block body%}
+
+<body>
+  <div class=".container-fluid">
+  <!-- head null line -->
+    <div class="row" id="head-null-line">
+    </div>
+
+<!-- main title -->
+    <div class="row" id="main">
+
+      <!-- 特定类目的导航内容 -->
+        <div class="col-md-8">
+            <ul class="list">
+                {% for index,row in webcsv.iterrows()%}
+                  <li><a href={{row.url}}>{{row.website}}</a>
+                  </li>
+                {% endfor %}
+            </ul>
+          </div>
+
+        <!-- title -->
+        <div class="col-md-2">
+            <!-- 传递类目 title -->
+            <span><<</span>
+            <span class="sub-title">{{title}}</span>
+        </div>
+
+        <!--  回到首页导航 -->
+       <div class="col-md-2">
+         <span><<</span>
+        <a href="/" id="web-nav-title">中国传统文化网址导航</a>
+       </div>
+
+    </div>
+
+  </div>
+</body>
+{% endblock%}
+
+<!-- 继承 index.html 角标 -->
+{% block footer%}
+{{ super() }}
+{% endblock%}
+
+</html>
