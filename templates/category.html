@@ -6,14 +6,11 @@
 {% block head%}
 <!-- 继承index.html模板head内容 -->
 {{ super() }}
-<!-- 传递进类目的title -->
-<title>{{title}}</title>
 {% endblock%}
 
 {% block body%}
-
 <body>
-  <div class=".container-fluid">
+  <div class="container-fluid">
   <!-- head null line -->
     <div class="row" id="head-null-line">
     </div>
@@ -25,22 +22,28 @@
         <div class="col-md-8">
             <ul class="list">
                 {% for index,row in webcsv.iterrows()%}
-                  <li><a href={{row.url}}>{{row.website}}</a>
+                  <li><a href={{row.url}} target="_blank">{{row.website}}</a>
                   </li>
                 {% endfor %}
             </ul>
           </div>
 
+        <div class="col-md-1" id="sign">
+          <span><<</span>
+        </div>
+
         <!-- title -->
-        <div class="col-md-2">
+        <div class="col-md-1" id="sub-title">
             <!-- 传递类目 title -->
-            <span><<</span>
-            <span class="sub-title">{{title}}</span>
+            <span>{{title}}</span>
+        </div>
+
+        <div class="col-md-1" id="sign">
+          <span><<</span>
         </div>
 
         <!--  回到首页导航 -->
-       <div class="col-md-2">
-         <span><<</span>
+       <div class="col-md-1">
         <a href="/" id="web-nav-title">中国传统文化网址导航</a>
        </div>
 
